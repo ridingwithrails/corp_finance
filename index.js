@@ -13,4 +13,16 @@ const annuity = (pv, t, r) => {
   return format(cf)
 }
 
+const future_value = (pv, r) => {
+  return (
+    pv * (1 + r)
+  )
+}
+
+const present_value = (fv, r, t) => {
+  return (
+    fv / Math.pow((1 + r), t)
+  )
+}
+
 console.log(annuity(1_000_000, 10, .10))
