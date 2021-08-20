@@ -1,0 +1,16 @@
+{
+  "name": "corp_finance",
+  "version": "0.0.1",
+  "description": "Small lib of Finance Formulas",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "keywords": [
+    "finance",
+    "formulas"
+  ],
+  "author": "Anis Tayebali",
+  "license": "ISC",
+  "dependencies": {}
+}
