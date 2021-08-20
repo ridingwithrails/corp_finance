@@ -25,4 +25,11 @@ const present_value = (fv, r, t) => {
   )
 }
 
+const npv = (discount, cash_flows, time, price) => {
+  const value = cash_flows.reduce((total, cf) => {
+    return (total + cf / Math.pow((1 + discount), time))
+  })
+  return (-price + value)
+}
+
 console.log(annuity(1_000_000, 10, .10))
