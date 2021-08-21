@@ -4,4 +4,8 @@ const formatter = new Intl.NumberFormat('en-US', {
     minimumFractionDigits: 2
 })
 
-module.exports = { formatter };
+const percentage_format = (n) => {
+    return (`${n * 100} %`)
+}
+
+module.exports = { formatter, percentage_format };
