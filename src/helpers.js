@@ -5,7 +5,7 @@ const formatter = new Intl.NumberFormat('en-US', {
 })
 
 const percentage_format = (n) => {
-    return (`${n * 100} %`)
+    return (`${(n * 100).toFixed(2)} %`)
 }
 
 module.exports = { formatter, percentage_format };

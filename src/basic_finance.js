@@ -3,16 +3,16 @@ const format = helpers.formatter.format
 const rate_format = helpers.percentage_format
 
 module.exports = {
-    rate_of_return: (investment, payout) => {
-        const rate = ((payout - investment) / investment)
-        return rate_format(rate)
+    rate_of_return: (initial_investment, current_value) => {
+        const rate = ((current_value - initial_investment) / current_value)
+        return rate
     },
 
     annuity: (pv, t, r) => {
         let cf = pv * r
         const rate_annuity = 1 - (1 / Math.pow(1 + r, t))
         cf = cf / rate_annuity
-        return format(cf)
+        return cf
     },
 
     future_value: (pv, r) => {
