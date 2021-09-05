@@ -3,15 +3,15 @@ const format = helpers.formatter.format
 const rate_format = helpers.percentage_format
 
 module.exports = {
-    couponPayment: (params) => {
+    coupon_payment: (params) => {
 
     },
 
-    bondPrice: (params) => {
+    bond_price: (params) => {
 
     },
 
-    stripYield: (params) => {
+    strip_yield: (params) => {
 
     }
 }
