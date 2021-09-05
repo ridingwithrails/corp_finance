@@ -2,13 +2,7 @@ const helpers = require('./helpers')
 const format = helpers.formatter.format
 const rate_format = helpers.percentage_format
 
-const npv = (irr, investment, cashFlows) => {
-    let returns = 0
-    cashFlows.forEach((cf, index) => {
-        returns = returns + (cf / Math.pow(1 + irr, index + 1))
-    })
-    return (investment + returns)
-}
+
 
 module.exports = {
     irr: (cashFlows) => {
@@ -27,7 +21,7 @@ module.exports = {
         }
 
         for (let i = 0; i < maxIteration; i++) {
-            value = npv(irr, investment, cashFlows)
+            value = helpers.npv(irr, investment, cashFlows)
             if (value < precision) {
                 break
             } else if (irr >= irr_max) {
