@@ -14,12 +14,12 @@ describe('Budgeting:', function () {
 
     describe('Profitabability Index', function () {
         it('Takes Initial Investment and NPV returns Profitablity Index', function () {
-            result = format(budgeting.profitabalityIndex(100, -10))
+            result = format(budgeting.profitabality_index(100, -10))
             expect(result).to.eq("-$10.00")
         })
 
         it("Safely handles zeros", function () {
-            result = format(budgeting.profitabalityIndex(100, 0))
+            result = format(budgeting.profitabality_index(100, 0))
             expect(result).to.eq("$0.00")
         })
     })
