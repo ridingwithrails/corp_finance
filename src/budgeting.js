@@ -33,6 +33,13 @@ module.exports = {
         }
         return irr
     },
+    profitabalityIndex: (npv, c0) => {
+        if (c0 == 0) {
+            return 0
+        } else {
+            return (npv / c0)
+        }
+    }
 }
 
 
