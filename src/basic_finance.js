@@ -1,7 +1,3 @@
-const helpers = require('./helpers')
-const format = helpers.formatter.format
-const rate_format = helpers.percentage_format
-
 module.exports = {
     rate_of_return: (initial_investment, current_value) => {
         const rate = ((current_value - initial_investment) / current_value)

@@ -7,7 +7,6 @@ const formatter = new Intl.NumberFormat('en-US', {
 const percentage_format = (n) => {
     return (`${(n * 100).toFixed(2)} %`)
 }
-
 const npv = (irr, investment, cashFlows) => {
     let returns = 0
     cashFlows.forEach((cf, index) => {
@@ -15,6 +14,5 @@ const npv = (irr, investment, cashFlows) => {
     })
     return (investment + returns)
 }
-
 
 module.exports = { formatter, percentage_format, npv };
